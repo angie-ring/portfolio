@@ -1,0 +1,250 @@
+/* ---------------------- */
+/* Base Styles */
+/* ---------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #1F3D2F;           /* Primary text (dark green) */
+  background: #E9F7EF;       /* Light green page background */
+}
+
+/* Utility Container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Banner */
+.banner {
+  width: 100%;
+  height: 250px;
+  background-image: url("green_banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  color: #FFFFFF;
+}
+
+/* Profile Picture */
+.profile {
+  position: absolute; 
+  transform: translateY(-35%);
+  left: 540px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,.15);
+}
+
+/* ---------------------- */
+/* Header / Profile Info */
+/* ---------------------- */
+.profile-header {
+  background: #DFF3E1;       /* Section background */
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #C8E6C9; /* subtle green divider */
+}
+
+.profile-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #27593c;
+}
+
+.profile-header .title,
+.profile-header .location {
+  font-size: 1rem;
+  color: #3A5A44;            /* Secondary text */
+  margin-top: .25rem;
+}
+
+/* Social Links */
+.social-links {
+  margin-top: .75rem;
+}
+
+.social-links a {
+  margin: 0 .5rem;
+  text-decoration: none;
+  color: #146135;            /* Accent green links */
+  font-size: .95rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #45A049;            /* Hover green */
+}
+
+/* ---------------------- */
+/* Bio Section */
+/* ---------------------- */
+.bio-section {
+  background: #DFF3E1;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #C8E6C9;
+  font-size: 1rem;
+  color: #3A5A44;
+}
+
+/* ---------------------- */
+/* Portfolio Section */
+/* ---------------------- */
+.portfolio-section {
+  padding: 1.5rem 1rem;
+}
+
+.portfolio-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #1F3D2F;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.25rem;
+}
+
+.portfolio-item {
+  background: #DEF2E7;       /* Light green card */
+  border: 1px solid #C8E6C9;
+  border-radius: 6px;
+  transition: box-shadow .2s ease;
+}
+
+.portfolio-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: .75rem;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.portfolio-item .thumb {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.portfolio-item .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.portfolio-item h3 {
+  margin-top: .75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1F3D2F;
+}
+
+.item-description {
+  font-size: .9rem;
+  color: #3A5A44;
+  margin-top: .25rem;
+}
+
+.empty-message {
+  text-align: center;
+  font-size: 1rem;
+  color: #3A5A44;
+  margin-top: 1rem;
+}
+
+/* ---------------------- */
+/* Buttons / Links */
+/* ---------------------- */
+button, .btn {
+  background-color: #4CAF50;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #45A049;
+}
+
+/* ---------------------- */
+/* Footer */
+/* ---------------------- */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: .9rem;
+  color: #3A5A44;
+  background: #DFF3E1;
+}
+
+/* ---------------------- */
+/* Dark Mode Support */
+/* ---------------------- */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1B2B1F;
+    color: #E6F2E9;
+  }
+
+  .profile-header,
+  .bio-section,
+  .footer {
+    background: #22332A;
+    border-color: #334634;
+    color: #E6F2E9;
+  }
+
+  .profile-header .title,
+  .profile-header .location,
+  .bio-section,
+  .item-description,
+  .empty-message,
+  .footer {
+    color: #B0CBB3;
+  }
+
+  .social-links a,
+  button,
+  .btn {
+    background-color: #6FCF70;
+    color: #1B2B1F;
+  }
+
+  .social-links a:hover,
+  button:hover,
+  .btn:hover {
+    background-color: #57A957;
+  }
+
+  .portfolio-item {
+    background: #22332A;
+    border-color: #334634;
+  }
+
+  .portfolio-item h3 {
+    color: #E6F2E9;
+  }
+
+  .portfolio-section h2 {
+    color: #E6F2E9;
+  }
+}
